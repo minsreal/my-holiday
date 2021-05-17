@@ -1,0 +1,14 @@
+<template>
+  <div id="he-plugin-standard"></div>
+</template>
+
+<script>
+export default {
+  name: 'Weather',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  }
+}
+</script>
