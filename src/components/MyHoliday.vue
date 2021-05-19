@@ -2,10 +2,15 @@
   <div class="my-holiday">
     <div class="my-holiday-wrapper">
       <div class="my-holiday-top">
-        <country-selector />
-        <weather />
+        <country-selector
+          @selectCity="selectCity"
+        />
+        <weather
+          :location="city"
+        />
       </div>
       <div class="my-holiday-bottom">
+        
       </div>
     </div>
   </div>
@@ -19,7 +24,12 @@ export default {
   components: {CountrySelector, Weather},
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      city: {}
+    }
+  },
+  methods: {
+    selectCity (city) {
+      this.city = city
     }
   }
 }

@@ -14,6 +14,7 @@
         :list="cities"
         :placeholder="cityPlaceholder"
         :defTxt="cityDefTxt"
+        @chooseFn="selectCity"
       />
     </div>
   </div>
@@ -50,7 +51,7 @@ export default {
       this.cityDefTxt = 'Please select a city'
       this.$emit('selectCountry', item)
     },
-    async selectCity (item) {
+    selectCity (item) {
       this.$emit('selectCity', item)
     }
   }
@@ -64,6 +65,8 @@ export default {
   flex-direction: column;
   justify-content: center;
   padding: 0 20px;
+  background-image: url('https://cdn.heweather.com/img/plugin/190516/bg/view/104n.png');
+  color: white;
 }
 .city {
   margin-top: 40px;
