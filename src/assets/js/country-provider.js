@@ -6,8 +6,12 @@ export default {
   getCountries: function () {
     let result = []
     for (let item of data) {
+      if (!item.code2) {
+        continue
+      }
       result.push({
-        name: item.englishName
+        name: item.englishName,
+        code: item.code2.toLowerCase()
       })
     }
 

@@ -24,6 +24,4 @@ npm run unit
 npm test
 ```
 
-# ISO 3166 城市代码： https://www.iso.org/obp/ui/#search
-# 公共节假日： https://www.timeanddate.com/holidays/?allcountries
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
