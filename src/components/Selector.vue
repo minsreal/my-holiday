@@ -43,8 +43,12 @@ export default {
       }
     }
   },
-  computed: {},
   created () {},
+  watch: {
+    defTxt: function () {
+      this.txt = null
+    }
+  },
   mounted () {
     document.addEventListener('click', this.eventFn)
   },

@@ -13,6 +13,7 @@
         label="City:"
         :list="cities"
         :placeholder="cityPlaceholder"
+        :defTxt="cityDefTxt"
       />
     </div>
   </div>
@@ -30,7 +31,8 @@ export default {
     return {
       countries: [],
       cities: [],
-      cityPlaceholder: 'Please select a country first'
+      cityPlaceholder: 'Please select a country first',
+      cityDefTxt: null
     }
   },
   created () {
@@ -45,6 +47,7 @@ export default {
       }
       this.cities = result.data.topCityList
       this.cityPlaceholder = 'Please select a city'
+      this.cityDefTxt = 'Please select a city'
       this.$emit('selectCountry', item)
     },
     async selectCity (item) {

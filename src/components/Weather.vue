@@ -12,3 +12,8 @@ export default {
   }
 }
 </script>
+<style lang="css">
+.wv-lt-location > a {
+  display: none !important;
+}
+</style>
