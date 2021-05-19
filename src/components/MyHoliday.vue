@@ -32,4 +32,7 @@ export default {
   display: flex;
   justify-content: center;
 }
+.my-holiday-top {
+  display: flex;
+}
 </style>

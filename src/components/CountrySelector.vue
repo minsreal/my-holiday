@@ -58,9 +58,14 @@ export default {
 </script>
 <style lang="css" scoped>
 .country-selector {
-  width: 400px;
+  width: 450px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
 }
 .city {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 </style>
