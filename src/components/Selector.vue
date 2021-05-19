@@ -6,7 +6,7 @@
     <div class="label selected">{{label}}</div>
     <div
       class="select-right selected"
-      :class="[active? 'active': '', txt ? '': 'gray']"
+      :class="[active ? 'active' : '', txt ? '': 'gray']"
     >{{txt ? txt : placeholder}}</div>
     <div
       class="list selected"
@@ -17,7 +17,7 @@
         v-for="(item,index) in list"
         :key="index"
         @click="chooseFn(item)"
-      >{{item.value}}</div>
+      >{{item.name}}</div>
     </div>
   </div>
 </template>
@@ -60,7 +60,7 @@ export default {
       this.activeSelectIndex = activeSelectIndex
     },
     chooseFn (obj) {
-      this.txt = obj.value
+      this.txt = obj.name
       this.$emit('chooseFn', obj)
     }
   }
@@ -75,6 +75,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 .select-box .list {
   position: absolute;
@@ -90,5 +91,23 @@ export default {
   z-index: 9;
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+.select-box .list::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+.select-right.gray {
+  color: #a8a8a8;
+}
+.select-box .list .select-part {
+  height: 67px;
+  line-height: 67px;
+  text-align: center;
+  background-color: #f9f9f9;
+  color: #434343;
+  font-size: 16px;
+}
+.select-box .list .select-part:hover {
+  background-color: #fff;
 }
 </style>

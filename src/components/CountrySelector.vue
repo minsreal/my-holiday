@@ -1,13 +1,16 @@
 <template>
   <div class="country-selector">
     <div class="country">
-      <div class="country-txt">Country:</div>
       <selector
+        label="Country:"
         :list="countries"
+        placeholder="Please select a country"
       />
     </div>
     <div class="city">
-      <div class="city">City:</div>
+      <selector
+        label="city:"
+      />
     </div>
   </div>
 </template>
@@ -30,3 +33,8 @@ export default {
   }
 }
 </script>
+<style lang="css" scoped>
+.country-selector {
+  width: 400px;
+}
+</style>
