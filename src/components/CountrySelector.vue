@@ -64,7 +64,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 20px;
   background-image: url('https://cdn.heweather.com/img/plugin/190516/bg/view/104n.png');
   color: white;
 }

@@ -75,11 +75,11 @@ export default {
 .select-box {
   position: relative;
   height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  padding: 0 20px;
 }
 .select-box .list {
   position: absolute;
