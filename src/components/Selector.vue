@@ -25,7 +25,7 @@
 let activeSelectIndex = 0
 export default {
   name: 'Selector',
-  props: ['label', 'list', 'defTxt', 'placeholder'],
+  props: ['label', 'list', 'defTxt', 'placeholder', 'clear'],
   components: {},
   data () {
     return {
@@ -45,7 +45,7 @@ export default {
   },
   created () {},
   watch: {
-    defTxt: function () {
+    clear: function () {
       this.txt = null
     }
   },

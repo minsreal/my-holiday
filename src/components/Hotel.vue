@@ -36,7 +36,6 @@ export default {
   methods: {
     fetchHotels (city) {
       this.hotels = HotelProvider.getHotels(city)
-      console.log(this.hotels)
     }
   }
 }

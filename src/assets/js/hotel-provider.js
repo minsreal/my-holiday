@@ -22,10 +22,13 @@ function getRandomInt (max) {
 
 export default {
   getHotels (city) {
+    if (!city) {
+      return []
+    }
     let result = []
     for (let i = 0; i < 10; i++) {
       result.push({
-        name: city + '\' Hotel ' + (i + 1),
+        name: city + '\'s Hotel ' + (i + 1),
         price: '$200',
         cover: Images[getRandomInt(Images.length)]
       })

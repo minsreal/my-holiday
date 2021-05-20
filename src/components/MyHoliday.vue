@@ -42,6 +42,7 @@ export default {
     },
     selectCountry (country) {
       this.country = country.name
+      this.city = {}
     }
   }
 }

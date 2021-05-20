@@ -13,7 +13,7 @@
         label="City:"
         :list="cities"
         :placeholder="cityPlaceholder"
-        :defTxt="cityDefTxt"
+        :clear="clearCity"
         @chooseFn="selectCity"
       />
     </div>
@@ -33,7 +33,7 @@ export default {
       countries: [],
       cities: [],
       cityPlaceholder: 'Please select a country first',
-      cityDefTxt: null
+      clearCity: false
     }
   },
   created () {
@@ -48,7 +48,7 @@ export default {
       }
       this.cities = result.data.topCityList
       this.cityPlaceholder = 'Please select a city'
-      this.cityDefTxt = 'Please select a city'
+      this.clearCity = !this.clearCity
       this.$emit('selectCountry', item)
     },
     selectCity (item) {
