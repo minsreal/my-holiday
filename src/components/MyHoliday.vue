@@ -14,6 +14,9 @@
         <holiday
           :country="country"
         />
+        <hotel
+          :city="city.name"
+        />
       </div>
     </div>
   </div>
@@ -23,9 +26,10 @@
 import CountrySelector from '@/components/CountrySelector'
 import Weather from '@/components/Weather'
 import Holiday from '@/components/Holiday'
+import Hotel from '@/components/Hotel'
 export default {
   name: 'MyHoliday',
-  components: {CountrySelector, Weather, Holiday},
+  components: {CountrySelector, Weather, Holiday, Hotel},
   data () {
     return {
       city: {},
@@ -50,7 +54,7 @@ export default {
   display: flex;
   justify-content: center;
 }
-.my-holiday-top {
+.my-holiday-top, .my-holiday-bottom {
   display: flex;
 }
 </style>

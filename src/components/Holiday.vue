@@ -43,7 +43,6 @@ export default {
         item.year = cuts[0]
       }
       this.holidays = holidays
-      console.log(this.holidays)
     }
   }
 }
