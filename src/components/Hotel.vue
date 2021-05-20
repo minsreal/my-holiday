@@ -58,4 +58,13 @@ export default {
 .item-left-img > img {
   width: 125px;
 }
+.hotel-name {
+  color: #133E84;
+  font-size: 1.3em;
+  text-align: left;
+}
+.hotel-price {
+  margin-top: 1.8em;
+  text-align: left;
+}
 </style>
